@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Microsoft JhengHei';
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap{
+  max-width: 768px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.header-logo{
+  height: 50px;
+}
+ 
+.product{
+  height: 200px;
+  border:3px solid #ffb200;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.chose{
+  line-height: 2;
+  height: 0;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  background-color: snow;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+.display .chose{
+  height: auto;
+  padding: 10px 12px;
+}
+.display .product{
+  border-color: #fff;
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 5px 0px;
+}
+
+.row{
+  /* background-image: url("../img/background-3017167_1920.jpg"); */
+  background-color: rgb(255, 220, 106);
+}
+
+.quantity{
+  border-radius: 10px;
+  width: 30%;
+  margin: 0px 5px;
+  border: 1px solid #999;
+}
+
+.submit{
+  background: #ffce52;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.d-flex .button{
+  background-color:#ff800738;
+  border: aliceblue;
+  width: 25px;
+}

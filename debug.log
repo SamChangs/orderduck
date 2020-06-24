@@ -1,0 +1,6 @@
+[0624/021927.064:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0624/021927.062:ERROR:process_reader_win.cc(151)] SuspendThread: 存取被拒。 (0x5)
+[0624/021927.065:ERROR:process_reader_win.cc(123)] NtOpenThread: {拒絕存取} 程序已請求存取一物件，但未被授與存取權。 (0xc0000022)
+[0624/021927.067:ERROR:exception_snapshot_win.cc(98)] thread ID 14904 not found in process
+[0624/021927.065:ERROR:process_reader_win.cc(123)] NtOpenThread: {拒絕存取} 程序已請求存取一物件，但未被授與存取權。 (0xc0000022)
+[0624/021927.068:ERROR:exception_snapshot_win.cc(98)] thread ID 15568 not found in process
