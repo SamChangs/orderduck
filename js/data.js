@@ -145,7 +145,6 @@ function renderHTML() {
       </div>
     </div>
     `
-    
   }
   // console.log(str)
   itemDom.innerHTML = str
@@ -265,10 +264,16 @@ function sumPrice() {
 function sumOrder(){
   let str=''
   const allorder = Object.values(order).map((item) => {
-    str = str + `<p>共${item.price}元, ${item.name}, ${item.num}個</p>`
-    console.log(str)
+    console.log(item)
+    str = str + `<tr class="text-nowrap">
+    <th scope="row">${item.name}</th>
+    <td>${item.num}個</td>
+    <td>${item.spicy}</td>
+    <td>${item.price}</td>
+    </tr>`
+    
   });
-  $('.modal-body').html(str)
+  $('#tbody').html(str)
   $('#sum span').text(sumPrice())
 }
 
