@@ -54,6 +54,10 @@ table {
   margin: 0 auto;
 }
 
+.container{
+  padding-bottom: 80px;
+}
+
 .header-logo{
   height: 50px;
 }
@@ -114,4 +118,30 @@ table {
   background-color:#ff800738;
   border: aliceblue;
   width: 25px;
+}
+
+.footer{
+  background-color:rgb(248, 150, 114);
+  height: 80px;
+  border-top: 8px solid rgb(255, 138, 55);
+  display: grid;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.btn-red{
+  background-color: rgb(223, 41, 78);
+  color: #fff;
+}
+
+.modal-content{
+  top:200px;
 }

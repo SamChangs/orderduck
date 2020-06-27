@@ -243,10 +243,43 @@ function updataOrder(quantity,id,response){
   if($(quantity).val() < 1) {
     delete order[data[id].name]
     $(`#chose-${id} .hot`).addClass('d-none')
+    sumPrice()
   } else {
     // if (response.indexOf)
     order[data[id].name] = response
     $(`#chose-${id} .hot`).removeClass('d-none')
+    sumPrice()
   }
-  console.log(Object.keys(order).length, order);
+  // console.log(Object.keys(order).length, order);
 }
+
+function sumPrice() {
+  let sum = 0
+  const newList = Object.values(order).map(item => {
+   sum = sum + item.price
+  });
+  $('#price').text(sum)
+  return sum
+}
+
+function sumOrder(){
+  let str=''
+  const allorder = Object.values(order).map((item) => {
+    str = str + `<p>共${item.price}元, ${item.name}, ${item.num}個</p>`
+    console.log(str)
+  });
+  $('.modal-body').html(str)
+  $('#sum span').text(sumPrice())
+}
+
+$('#buttons').click(function() {
+  if (Object.keys(order).length >0){
+    sumOrder()
+  }
+  else
+  {
+    $('.modal-body').text('請點餐')
+    $('#sum span').text(sumPrice())
+  }
+})
+
