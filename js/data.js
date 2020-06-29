@@ -249,7 +249,6 @@ function updataOrder(quantity,id,response){
     order[data[id].name] = response
     $(`#chose-${id} .hot`).removeClass('d-none')
     sumPrice()
-    
   }
   // console.log(Object.keys(order).length, order);
 }
@@ -268,7 +267,7 @@ function sumOrder(){
   const allorder = Object.values(order).map((item) => {
     str = str + `<tr class="text-nowrap">
     <th scope="row">${item.name}</th>
-    <td>${item.num}個</td>
+    <td>${item.num}</td>
     <td>${item.spicy}</td>
     <td>${item.price}</td>
     </tr>`
@@ -276,6 +275,7 @@ function sumOrder(){
   });
   $('#tbody').html(str)
   $('#sum span').text(sumPrice())
+  // $('.modal-body').text(sumPrice())
 }
 
 $('#buttons').click(function() {
@@ -284,8 +284,7 @@ $('#buttons').click(function() {
   }
   else
   {
-    if (Object.keys(order).length >0)
-      $('.modal-body').text('請點餐')
+     $('#tbody').html('<tr><td colspan="4">請點餐</td></tr>')
      $('#sum span').text(sumPrice())
   }
 })
