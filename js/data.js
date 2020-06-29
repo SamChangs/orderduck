@@ -242,12 +242,14 @@ function updataOrder(quantity,id,response){
   if($(quantity).val() < 1) {
     delete order[data[id].name]
     $(`#chose-${id} .hot`).addClass('d-none')
+    sumOrder()
     sumPrice()
   } else {
     // if (response.indexOf)
     order[data[id].name] = response
     $(`#chose-${id} .hot`).removeClass('d-none')
     sumPrice()
+    
   }
   // console.log(Object.keys(order).length, order);
 }
@@ -264,7 +266,6 @@ function sumPrice() {
 function sumOrder(){
   let str=''
   const allorder = Object.values(order).map((item) => {
-    console.log(item)
     str = str + `<tr class="text-nowrap">
     <th scope="row">${item.name}</th>
     <td>${item.num}個</td>
@@ -283,8 +284,9 @@ $('#buttons').click(function() {
   }
   else
   {
-    $('.modal-body').text('請點餐')
-    $('#sum span').text(sumPrice())
+    if (Object.keys(order).length >0)
+      $('.modal-body').text('請點餐')
+     $('#sum span').text(sumPrice())
   }
 })
 
