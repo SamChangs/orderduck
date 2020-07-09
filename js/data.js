@@ -302,7 +302,7 @@ $('#re-button').click(function() {
 
 $('#copy').click(function() {
   setTimeout(function(){
-    var r = confirm("餐點已複製到剪貼簿，請直接到貝稑莎的 LINE '貼上'");
+    var r = confirm("餐點已複製到剪貼簿，請直接到ㄚㄚ滷味的 LINE '貼上'");
     if (r == true) {
       window.location.href = 'https://line.me/ti/p/i0GfPrrKiR';
     }
