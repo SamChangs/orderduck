@@ -82,7 +82,7 @@ table {
 }
 .display .chose{
   height: auto;
-  padding: 10px 12px;
+  padding: 10px 5px;
 }
 .display .product{
   border-color: #fff;
@@ -104,7 +104,6 @@ table {
   border-radius: 10px;
   margin: 0px 5px;
   border: 1px solid #999;
-  max-width: 30%;
 }
 
 .submit{
@@ -117,7 +116,7 @@ table {
 .d-flex .button{
   background-color:#ff800738;
   border: aliceblue;
-  width: 25px;
+  width: 22px;
 }
 
 .footer{

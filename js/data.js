@@ -241,7 +241,7 @@ $('.chose').each(function(){
 function updataOrder(quantity,id,response){
   if($(quantity).val() < 1) {
     delete order[data[id].name]
-    $(`#chose-${id} .hot`).addClass('d-none')
+    $(`#chose-${id} .hot`).addClass('d-none')  // d-none is not display in bootstrap4
     sumOrder()
     sumPrice()
   } else {
@@ -250,7 +250,7 @@ function updataOrder(quantity,id,response){
     $(`#chose-${id} .hot`).removeClass('d-none')
     sumPrice()
   }
-  // console.log(Object.keys(order).length, order);
+  //  console.log(Object.keys(order).length, order);
 }
 
 function sumPrice() {
@@ -271,7 +271,7 @@ function sumOrder(){
     <td>${item.spicy}</td>
     <td>${item.price}</td>
     </tr>`
-    
+
   });
   $('#tbody').html(str)
   $('#sum span').text(sumPrice())
@@ -281,11 +281,21 @@ function sumOrder(){
 $('#buttons').click(function() {
   if (Object.keys(order).length >0){
     sumOrder()
+    $(`#modal-footer`).removeClass('d-none')
   }
   else
   {
      $('#tbody').html('<tr><td colspan="4">請點餐</td></tr>')
      $('#sum span').text(sumPrice())
+     $(`#modal-footer`).addClass('d-none')
   }
 })
 
+$('#re-button').click(function() {
+  alert('確定要重選嗎')
+  order=[]
+  sumPrice()
+  $('.quantity').val(0)
+  $(` .hot`).addClass('d-none')
+    console.log(order)
+})
