@@ -59,7 +59,7 @@ const data=
   },{
     name:"豬腳(葷)",
     num:0,
-    pic:"tongue.jpg",
+    pic:"pleg.jpg",
     unit:"1份",
     price:250,
     spicy:"小辣",
@@ -304,7 +304,7 @@ $('#copy').click(function() {
   setTimeout(function(){
     var r = confirm("餐點已複製到剪貼簿，請直接到貝稑莎的 LINE '貼上'");
     if (r == true) {
-      window.location.href = 'http://www.lianwo8.com';
+      window.location.href = 'https://line.me/ti/p/i0GfPrrKiR';
     }
   }, 300 )
 })
