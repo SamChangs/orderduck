@@ -1,3 +1,2 @@
 # orderduck
-#練習
 
